@@ -1,0 +1,33 @@
+$display-size: (
+  xs: 320px,
+  sm: 576px,
+  md: 768px,
+  lg: 1024px,
+  xl: 1200px,
+  xxl: 1400px,
+);
+
+@mixin mobile {
+  @media (max-width: calc(map-get($display-size, sm) - 1px)) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (min-width: map-get($display-size, sm)) and (max-width: calc(map-get($display-size, lg) - 1px)) {
+    @content;
+  }
+}
+
+@mixin tablet-down {
+  @media (max-width: calc(map-get($display-size, lg) - 1px)) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: map-get($display-size, lg)) {
+    @content;
+  }
+}
+

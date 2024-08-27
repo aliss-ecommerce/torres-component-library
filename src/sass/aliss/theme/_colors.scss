@@ -1,0 +1,36 @@
+$theme-colors: (
+  primary: (
+    light: lighten(#000000, 20%),
+    base: #000000,
+    dark: darken(#000000, 20%)
+  ),
+  secondary: (
+    light: lighten(#a4036f, 20%),
+    base: #a4036f,
+    dark: darken(#a4036f, 20%)
+  ),
+  error: (
+    light: lighten(#dc3545, 20%),
+    base: #dc3545,
+    dark: darken(#dc3545, 20%)
+  ),
+  blackT: (
+    lignt: linghten(#121212, 20%),
+    base: #121212,
+    dark: darken(#121212, 20%),
+  ),
+  whiteT: (
+    light: lighten(#ffffff, 20%),
+    base: #ffffff,
+    dark: darken(#ffffff, 20%),
+  ),
+  button: (
+    base: #121212,
+    inverse: #ffffff,
+  ),
+  through: (
+    base: #888,
+    inverse: #888,
+  
+  ),
+);

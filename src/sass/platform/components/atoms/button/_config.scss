@@ -1,0 +1,107 @@
+$torres-button: (
+  button: (
+    primary: (
+      background: (
+        base: map-get($theme-colors, "blackT", "base"),
+        inverse: map-get($theme-colors, "whiteT", "base"),
+      ),
+      border: (
+        radius: (
+          mobile: map-get($theme-border-radius, "button", "mobile"),
+          tablet: map-get($theme-border-radius, "button", "tablet"),
+          desktop: map-get($theme-border-radius, "button", "desktop"),
+        ),
+        border: (
+          base: none,
+          inverse: none,
+        ),
+      ),
+      text: (
+        color: (
+          base: map-get($theme-colors, "whiteT", "base"),
+          inverse: map-get($theme-colors, "blackT", "base"),
+        ),
+        font: (
+          size: (
+            mobile: remy(14px),
+            tablet: remy(16px),
+            desktop: remy(16px),
+          ),
+          weight: 500,
+        )
+      )
+    ),
+    secondary: (
+      background: (
+        base: transparent,
+        inverse: transparent,
+      ),
+      border: (
+        radius: (
+          mobile: map-get($theme-border-radius, "button", "mobile"),
+          tablet: map-get($theme-border-radius, "button", "tablet"),
+          desktop: map-get($theme-border-radius, "button", "desktop"),
+        ),
+        border: (
+          base: 1px solid map-get($theme-colors, "blackT", "base"),
+          inverse: 1px solid map-get($theme-colors, "whiteT", "base"),
+        )
+      ),
+      text: (
+        color: (
+          base: map-get($theme-colors, "blackT", "base"),
+          inverse: map-get($theme-colors, "whiteT", "base"),
+        ),
+        font: (
+          size: (
+            mobile: remy(14px),
+            tablet: remy(16px),
+            desktop: remy(16px),
+          ),
+          weight: 500,
+        )
+      )
+    ),
+    tertiary: (
+      background: (
+        base: transparent,
+        inverse: transparent,
+      ),
+      border: (
+        radius: (
+          mobile: map-get($theme-border-radius, "button", "mobile"),
+          tablet: map-get($theme-border-radius, "button", "tablet"),
+          desktop: map-get($theme-border-radius, "button", "desktop"),
+        ),
+        border: (
+          base: none,
+          inverse: none,
+        ),
+      ),
+      text: (
+        color: (
+          base: map-get($theme-colors, "blackT", "base"),
+          inverse: map-get($theme-colors, "whiteT", "base"),
+        ),
+        font: (
+          size: (
+            mobile: remy(14px),
+            tablet: remy(16px),
+            desktop: remy(16px),
+          ),
+          weight: 500,
+        )
+      )
+    ),
+    padding: (
+      mobile: remy(12px) remy(18px),
+      tablet: remy(14px) remy(24px),
+      desktop: remy(16px) remy(32px),
+    ),
+    gap: (
+      mobile: remy(6px),
+      tablet: remy(6px),
+      desktop: remy(8px),
+    ),
+  ),
+);

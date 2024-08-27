@@ -1,0 +1,22 @@
+.torres-price {
+  &__value {
+    font-size: remy(14px);
+    color: map-get($theme-colors, "blackT", "base");
+    font-weight: 600;
+
+    &--through {
+      font-size: remy(16px);
+      text-decoration: line-through;
+      color: map-get($theme-colors, "through", "base");
+    }
+
+    @include tablet {
+      font-size: remy(16px);
+    }
+
+    @include desktop {
+      font-size: remy(16px);
+    }
+
+  }
+}

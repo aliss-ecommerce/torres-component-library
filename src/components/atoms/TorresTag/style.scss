@@ -1,0 +1,12 @@
+.torres-tag {
+  display: inline-block;
+  padding: remy(4px) remy(8px);
+  font-size: remy(14px);
+  font-weight: 500;
+  color: map-get($theme-colors, "whiteT", "base");
+  background-color: map-get($theme-colors, "secondary", "base");
+  border-radius: remy(4px);
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+}

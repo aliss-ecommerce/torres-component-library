@@ -1,0 +1,15 @@
+.torres-subtitle{
+  font-size: remy(24px);
+  color: map-get($theme-colors, "blackT", "base");
+  font-weight: 600;
+  margin: 0;
+
+  @include tablet {
+    font-size: remy(24px);
+  }
+
+  @include desktop {
+    font-size: remy(28px);
+  }
+
+}

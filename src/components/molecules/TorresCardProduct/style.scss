@@ -1,0 +1,61 @@
+.torres-card-product {
+  width: 100%;
+  min-width: remy(160px);
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: box-shadow 0.3s ease;
+  padding-bottom: 1rem;
+  position: relative;
+
+  &:hover {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+
+  @include tablet {
+    max-width: remy(228px);
+    min-width: remy(160px);
+  }
+
+  @include desktop {
+    max-width: remy(228px);
+    min-width: remy(160px);
+  }
+
+  &__container-tag{
+    position: absolute;
+    width: fit-content;
+    width: -moz-fit-content; // Firefox
+    top: 3%;
+    left: 5%;
+    z-index: 10;
+  }
+
+  &__container-name {
+    margin-top: remy(16px);
+    text-align: center;
+
+    .torres-card-product__name {
+      font-size: remy(14px);
+      font-weight: 500;
+      color: map-get($theme-colors, "blackT", "base");
+
+      @include tablet {
+        font-size: remy(15px);
+      }
+
+      @include desktop {
+        font-size: remy(16px);
+      }
+    }
+  }
+
+  &__container-prices {
+    margin-top: remy(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: remy(8px);
+  }
+}

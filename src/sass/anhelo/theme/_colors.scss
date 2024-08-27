@@ -1,0 +1,22 @@
+$theme-colors: (
+  "primary": (
+    light: lighten(#007bff, 20%),
+    base: #007bff,
+    dark: darken(#007bff, 20%)
+  ),
+  "secondary": (
+    light: lighten(#6c757d, 20%),
+    base: #6c757d,
+    dark: darken(#6c757d, 20%)
+  ),
+  "error": (
+    light: lighten(#dc3545, 20%),
+    base: #dc3545,
+    dark: darken(#dc3545, 20%)
+  ),
+  "blackT": (
+    lignt: linghten(#121212, 20%),
+    base: #121212,
+    dark: darken(#121212, 20%)
+  )
+);

@@ -1,0 +1,39 @@
+.torres-banner-two {
+  min-width: remy(343px);
+  position: relative;
+  transition: box-shadow 0.3s ease;
+
+  &:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  }
+
+  @include tablet {
+    min-width: remy(343px);
+    max-width: remy(652px);
+  }
+
+  @include desktop {
+    min-width: remy(343px);
+    max-width: remy(652px);
+  }
+
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: remy(14px);
+    position: absolute;
+    bottom: 9%;
+    left: 5%;
+    z-index: 10;
+
+    @include tablet {
+      gap: remy(14px);
+    }
+
+    @include desktop {
+      gap: remy(14px);
+    }
+  }
+}

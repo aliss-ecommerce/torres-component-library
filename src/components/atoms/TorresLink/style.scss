@@ -1,0 +1,45 @@
+.torres-link {
+  color: map-get($theme-colors, "primary", "base");
+  font-size: remy(14px);
+  font-weight: 600;
+  text-decoration: none;
+  width: fit-content;
+  width: -moz-fit-content; // Firefox
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: remy(4px);
+
+  @include tablet {
+    font-size: remy(16px);
+  }
+
+  @include desktop {
+    font-size: remy(16px);
+  }
+}
+
+.torres-link--disabled {
+  opacity: 0.5;
+  user-select: none;
+  cursor: default;
+}
+
+.torres-link--primary {
+  text-decoration: underline;
+}
+         
+.torres-link--secondary {
+  position: relative;
+  &::before{
+    content: " ";
+    position: absolute;
+    background-color: map-get($theme-colors, "primary", "base");
+    width: 100%;
+    height: 1px;
+    bottom: -15%;
+    left: 0;
+    z-index: 9;
+  }
+}
+
