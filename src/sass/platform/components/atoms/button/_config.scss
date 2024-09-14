@@ -28,8 +28,8 @@ $torres-button: (
             desktop: remy(16px),
           ),
           weight: 500,
-        )
-      )
+        ),
+      ),
     ),
     secondary: (
       background: (
@@ -45,7 +45,7 @@ $torres-button: (
         border: (
           base: 1px solid map-get($theme-colors, "blackT", "base"),
           inverse: 1px solid map-get($theme-colors, "whiteT", "base"),
-        )
+        ),
       ),
       text: (
         color: (
@@ -59,8 +59,8 @@ $torres-button: (
             desktop: remy(16px),
           ),
           weight: 500,
-        )
-      )
+        ),
+      ),
     ),
     tertiary: (
       background: (
@@ -90,8 +90,8 @@ $torres-button: (
             desktop: remy(16px),
           ),
           weight: 500,
-        )
-      )
+        ),
+      ),
     ),
     padding: (
       mobile: remy(12px) remy(18px),
@@ -102,6 +102,102 @@ $torres-button: (
       mobile: remy(6px),
       tablet: remy(6px),
       desktop: remy(8px),
+    ),
+  ),
+  buttonChip: (
+    primary: (
+      background: (
+        base: transparent,
+        inverse: transparent,
+      ),
+      border: (
+        radius: (
+          mobile: 0,
+          tablet: 0,
+          desktop: 0,
+        ),
+        notSelected: (
+          base: 1px solid
+            map-get($theme-colors, "borderButtonNotSelected", "base"),
+          inverse: 1px solid
+            map-get($theme-colors, "borderButtonNotSelected", "inverse"),
+        ),
+        selected: (
+          base: 1px solid map-get($theme-colors, "blackT", "base"),
+          inverse: 1px solid map-get($theme-colors, "whiteT", "inverse"),
+        ),
+      ),
+      text: (
+        color: (
+          base: map-get($theme-colors, "blackT", "base"),
+          inverse: map-get($theme-colors, "whiteT", "base"),
+        ),
+        font: (
+          size: (
+            mobile: remy(16px),
+            tablet: remy(16px),
+            desktop: remy(16px),
+          ),
+          weight: 500,
+        ),
+      ),
+    ),
+  ),
+  buttonColor: (
+    border: (
+      radius: (
+        mobile: map-get($theme-border-radius, "buttonColor", "mobile"),
+        tablet: map-get($theme-border-radius, "buttonColor", "tablet"),
+        desktop: map-get($theme-border-radius, "buttonColor", "desktop"),
+      ),
+    ),
+    size: (
+      width: (
+        mobile: remy(38px),
+        tablet: remy(38px),
+        desktop: remy(38px),
+      ),
+      height: (
+        mobile: remy(38px),
+        tablet: remy(38px),
+        desktop: remy(38px),
+      ),
+    ),
+    selected: (
+      background: (
+        base: map-get($theme-colors, "whiteT", "base"),
+        inverse: map-get($theme-colors, "blackT", "base"),
+      ),
+      border: (
+        base: 1px solid
+          map-get($theme-colors, "borderButtonColorselected", "base"),
+        inverse: 1px solid
+          map-get($theme-colors, "borderButtonColorselected", "inverse"),
+      ),
+      padding: (
+        mobile: remy(3px),
+        tablet: remy(3px),
+        desktop: remy(3px),
+      ),
+    ),
+  ),
+  ButtonIcon: (
+    primary: (
+      background: (
+        base: transparent,
+        inverse: transparent,
+      ),
+      border: (
+        radius: (
+          mobile: 50%,
+          tablet: 50%,
+          desktop: 50%,
+        ),
+        border: (
+          base: none,
+          inverse: none,
+        ),
+      ),
     ),
   ),
 );

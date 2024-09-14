@@ -1,0 +1,59 @@
+.torres-paragraph {
+  color: map-get($theme-colors, "blackT", "base");
+  font-weight: 400;
+  margin: 0;
+
+  &--large {
+    font-size: remy(14px);
+  }
+
+  &--medium {
+    font-size: remy(12px);
+  }
+
+  &--small {
+    font-size: remy(10px);
+  }
+
+  // align
+  &--justify {
+    text-align: justify;
+  }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--right {
+    text-align: right;
+  }
+
+  &--left {
+    text-align: left;
+  }
+
+  @include tablet {
+    &--large {
+      font-size: remy(16px);
+    }
+    &--medium {
+      font-size: remy(14px);
+    }
+    &--small {
+      font-size: remy(12px);
+    }
+  }
+
+  @include desktop {
+    &--large {
+      font-size: remy(16px);
+    }
+    &--medium {
+      font-size: remy(14px);
+    }
+
+    &--small {
+      font-size: remy(12px);
+    }
+  }
+}

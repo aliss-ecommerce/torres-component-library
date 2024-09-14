@@ -1,0 +1,110 @@
+.torres-button-chip {
+  height: remy(38px);
+  min-width: remy(38px);
+  padding: 0 remy(10px);
+  cursor: pointer;
+  background-color: map-get(
+    $torres-button,
+    "buttonChip",
+    "primary",
+    "background",
+    "base"
+  );
+  color: map-get(
+    $torres-button,
+    "buttonChip",
+    "primary",
+    "text",
+    "color",
+    "base"
+  );
+  border-radius: map-get(
+    $torres-button,
+    "buttonChip",
+    "primary",
+    "border",
+    "radius",
+    "mobile"
+  );
+  border: map-get(
+    $torres-button,
+    "buttonChip",
+    "primary",
+    "border",
+    "notSelected",
+    "base"
+  );
+  font-size: map-get(
+    $torres-button,
+    "buttonChip",
+    "primary",
+    "text",
+    "font",
+    "size",
+    "mobile"
+  );
+  font-weight: map-get(
+    $torres-button,
+    "buttonChip",
+    "primary",
+    "text",
+    "font",
+    "weight"
+  );
+
+  &:disabled {
+    @include buttonDisabled;
+  }
+
+  @include tablet {
+    font-size: map-get(
+      $torres-button,
+      "buttonChip",
+      "primary",
+      "text",
+      "font",
+      "size",
+      "tablet"
+    );
+    border-radius: map-get(
+      $torres-button,
+      "buttonChip",
+      "primary",
+      "border",
+      "radius",
+      "tablet"
+    );
+  }
+
+  @include desktop {
+    font-size: map-get(
+      $torres-button,
+      "buttonChip",
+      "primary",
+      "text",
+      "font",
+      "size",
+      "desktop"
+    );
+    border-radius: map-get(
+      $torres-button,
+      "buttonChip",
+      "primary",
+      "border",
+      "radius",
+      "desktop"
+    );
+  }
+}
+
+.torres-button-chip--selected {
+  border: map-get(
+    $torres-button,
+    "buttonChip",
+    "primary",
+    "border",
+    "selected",
+    "base"
+  );
+  border-width: 1.6px;
+}

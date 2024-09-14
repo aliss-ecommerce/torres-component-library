@@ -1,0 +1,24 @@
+.torres-group-button-chip {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: remy(12px);
+
+  //wrapContent
+
+  &--wrapContent {
+    flex-wrap: wrap;
+  }
+
+  &--noWrapContent {
+    flex-wrap: nowrap;
+    overflow: scroll;
+    scrollbar-width: none; /* Para Firefox */
+    -ms-overflow-style: none; /* Para Internet Explorer y Edge */
+
+    &::-webkit-scrollbar {
+      /* Para Chrome, Safari y Opera */
+      display: none;
+    }
+  }
+}

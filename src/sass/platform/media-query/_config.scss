@@ -1,11 +1,17 @@
 $display-size: (
-  xs: 320px,
+  xs: 350px,
   sm: 576px,
   md: 768px,
   lg: 1024px,
   xl: 1200px,
   xxl: 1400px,
 );
+
+@mixin mobile-xs {
+  @media (max-width: map-get($display-size, xs)) {
+    @content;
+  }
+}
 
 @mixin mobile {
   @media (max-width: calc(map-get($display-size, sm) - 1px)) {
@@ -30,4 +36,3 @@ $display-size: (
     @content;
   }
 }
-

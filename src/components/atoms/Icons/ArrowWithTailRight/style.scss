@@ -2,6 +2,7 @@
   width: 18px;
   height: 18px;
   fill: none;
+  transform: rotate(180deg);
   &--primary {
     path {
       stroke: map-get($theme-colors, "blackT", "base");

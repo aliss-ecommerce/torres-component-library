@@ -1,0 +1,38 @@
+.TorresFilter {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: remy(310px);
+  padding: remy(18px);
+  height: auto;
+
+  @include mobile-xs {
+    width: 90%;
+  }
+
+  @include tablet {
+    width: remy(310px);
+    padding: remy(18px);
+  }
+
+  @include desktop {
+    width: remy(300px);
+    padding: remy(24px);
+  }
+
+  &__container-header {
+    width: 100%;
+    margin-bottom: remy(32px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__container-item {
+    width: 100%;
+    margin-bottom: remy(32px);
+    display: flex;
+    flex-direction: column;
+    gap: remy(16px);
+  }
+}

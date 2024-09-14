@@ -1,0 +1,45 @@
+.torres-group-link-next {
+  &--noWrapContent {
+    overflow: auto;
+    height: remy(25px);
+    scrollbar-width: none; /* Para Firefox */
+    -ms-overflow-style: none; /* Para Internet Explorer y Edge */
+
+    &::-webkit-scrollbar {
+      /* Para Chrome, Safari y Opera */
+      display: none;
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: flex-start;
+    gap: remy(12px);
+    width: 100%;
+    height: fit-content;
+    height: -moz-fit-content; // Firefox
+    padding: remy(20px) 0;
+
+    &--horizontal {
+      display: flex;
+      justify-content: flex-start;
+      gap: remy(12px);
+    }
+
+    &--vertical {
+      display: flex;
+      flex-direction: column;
+      gap: remy(12px);
+    }
+
+    &--wrapContent {
+      flex-wrap: wrap;
+    }
+
+    &--noWrapContent {
+      width: max-content;
+      width: -moz-max-content; // Firefox
+      flex-wrap: nowrap;
+    }
+  }
+}

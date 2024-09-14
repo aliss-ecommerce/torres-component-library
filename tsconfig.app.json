@@ -26,6 +26,8 @@
       "components/*": ["src/components/*"]
     
     },
+    "outDir": "build",
+    "rootDir": "src", 
   },
   "include": ["src"]
 }

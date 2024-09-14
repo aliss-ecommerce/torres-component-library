@@ -1,0 +1,78 @@
+.torres-button-icon {
+  @include reset-button-style;
+  & {
+    height: remy(36px);
+    min-width: remy(36px);
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    transition: opacity 0.3s;
+  }
+
+  &:hover {
+    opacity: 0.5;
+  }
+
+  @include tablet {
+    height: remy(38px);
+    min-width: remy(38px);
+  }
+
+  @include desktop {
+    height: remy(40px);
+    min-width: remy(40px);
+  }
+
+  &:disabled {
+    @include buttonDisabled;
+  }
+
+  &--primary {
+    background-color: map-get(
+      $torres-button,
+      ButtonIcon,
+      "primary",
+      "background",
+      "base"
+    );
+    border-radius: map-get(
+      $torres-button,
+      ButtonIcon,
+      "primary",
+      "border",
+      "radius",
+      "mobile"
+    );
+    border: map-get(
+      $torres-button,
+      ButtonIcon,
+      "primary",
+      "border",
+      "border",
+      "base"
+    );
+
+    @include tablet {
+      border-radius: map-get(
+        $torres-button,
+        ButtonIcon,
+        "primary",
+        "border",
+        "radius",
+        "tablet"
+      );
+    }
+
+    @include desktop {
+      border-radius: map-get(
+        $torres-button,
+        ButtonIcon,
+        "primary",
+        "border",
+        "radius",
+        "desktop"
+      );
+    }
+  }
+}

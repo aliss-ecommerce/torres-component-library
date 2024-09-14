@@ -5,9 +5,16 @@
     font-weight: 600;
 
     &--through {
-      font-size: remy(16px);
+      font-size: remy(14px);
       text-decoration: line-through;
       color: map-get($theme-colors, "through", "base");
+      @include tablet {
+        font-size: remy(16px);
+      }
+
+      @include desktop {
+        font-size: remy(16px);
+      }
     }
 
     @include tablet {
@@ -17,6 +24,5 @@
     @include desktop {
       font-size: remy(16px);
     }
-
   }
 }

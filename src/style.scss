@@ -1,16 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
-@import './sass/aliss';
+@import "./sass/aliss";
 
-html{
+html {
   font-family: "Space Grotesk", sans-serif;
 }
 
-body.aliss{
-  @import './sass/aliss';
-}
+// body.aliss{
+//   @import './sass/aliss';
+// }
 
-body.anhelo{
-  @import './sass/anhelo';
-}
+// body.anhelo{
+//   @import './sass/anhelo';
+// }
 
-@import './sass/platform';
+@import "./sass/platform";

@@ -1,15 +1,55 @@
-.torres-subtitle{
-  font-size: remy(24px);
+.torres-subtitle {
   color: map-get($theme-colors, "blackT", "base");
   font-weight: 600;
   margin: 0;
 
+  &--large {
+    font-size: remy(22px);
+  }
+
+  &--medium {
+    font-size: remy(20px);
+  }
+
+  &--small {
+    font-size: remy(18px);
+  }
+
+  // align
+  &--center {
+    text-align: center;
+  }
+
+  &--right {
+    text-align: right;
+  }
+
+  &--left {
+    text-align: left;
+  }
+
   @include tablet {
-    font-size: remy(24px);
+    &--large {
+      font-size: remy(24px);
+    }
+    &--medium {
+      font-size: remy(20px);
+    }
+    &--small {
+      font-size: remy(18px);
+    }
   }
 
   @include desktop {
-    font-size: remy(28px);
-  }
+    &--large {
+      font-size: remy(28px);
+    }
+    &--medium {
+      font-size: remy(24px);
+    }
 
+    &--small {
+      font-size: remy(20px);
+    }
+  }
 }

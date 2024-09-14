@@ -1,3 +1,10 @@
-import './style.scss';
+// import './style.scss';
 
-export { default as TorresButton } from './components/atoms/TorresButton';
+// components
+export * from "./components/atoms";
+export * from "./components/molecules";
+export * from "./components/organisms";
+
+// types
+export * from "./types/constants";
+export * from "./types/models";

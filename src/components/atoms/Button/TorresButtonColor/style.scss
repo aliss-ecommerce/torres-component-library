@@ -1,0 +1,113 @@
+.torres-button-color {
+  @include reset-button-style;
+  & {
+    width: map-get($torres-button, "buttonColor", "size", "width", "mobile");
+    height: map-get($torres-button, "buttonColor", "size", "height", "mobile");
+    border-radius: map-get(
+      $torres-button,
+      "buttonColor",
+      "border",
+      "radius",
+      "mobile"
+    );
+  }
+
+  &:disabled {
+    @include buttonDisabled;
+  }
+
+  @include tablet {
+    width: map-get($torres-button, "buttonColor", "size", "width", "tablet");
+    height: map-get($torres-button, "buttonColor", "size", "height", "tablet");
+    border-radius: map-get(
+      $torres-button,
+      "buttonColor",
+      "border",
+      "radius",
+      "tablet"
+    );
+  }
+
+  @include desktop {
+    width: map-get($torres-button, "buttonColor", "size", "width", "desktop");
+    height: map-get($torres-button, "buttonColor", "size", "height", "desktop");
+    border-radius: map-get(
+      $torres-button,
+      "buttonColor",
+      "border",
+      "radius",
+      "desktop"
+    );
+  }
+
+  span {
+    display: block;
+    border-radius: map-get(
+      $torres-button,
+      "buttonColor",
+      "border",
+      "radius",
+      "mobile"
+    );
+    width: 100%;
+    height: 100%;
+
+    @include tablet {
+      border-radius: map-get(
+        $torres-button,
+        "buttonColor",
+        "border",
+        "radius",
+        "tablet"
+      );
+    }
+
+    @include desktop {
+      border-radius: map-get(
+        $torres-button,
+        "buttonColor",
+        "border",
+        "radius",
+        "desktop"
+      );
+    }
+  }
+}
+
+.torres-button-color--selected {
+  border: map-get($torres-button, "buttonColor", "selected", "border", "base");
+  padding: map-get(
+    $torres-button,
+    "buttonColor",
+    "selected",
+    "padding",
+    "mobile"
+  );
+  background-color: map-get(
+    $torres-button,
+    "buttonColor",
+    "selected",
+    "background",
+    "base"
+  );
+
+  @include tablet {
+    padding: map-get(
+      $torres-button,
+      "buttonColor",
+      "selected",
+      "padding",
+      "tablet"
+    );
+  }
+
+  @include desktop {
+    padding: map-get(
+      $torres-button,
+      "buttonColor",
+      "selected",
+      "padding",
+      "desktop"
+    );
+  }
+}

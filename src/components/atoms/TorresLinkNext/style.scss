@@ -1,0 +1,63 @@
+.torres-link-next {
+  @include reset-button-style;
+
+  & {
+    color: map-get($theme-colors, "primary", "base");
+    font-size: remy(14px);
+    font-weight: 600;
+    text-decoration: none;
+    width: fit-content;
+    width: -moz-fit-content; // Firefox
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: remy(4px);
+    transition: 0.3s ease-in-out;
+  }
+
+  @include tablet {
+    font-size: remy(16px);
+  }
+
+  @include desktop {
+    font-size: remy(16px);
+  }
+}
+
+.torres-link-next--disabled {
+  opacity: 0.5;
+  user-select: none;
+  cursor: default;
+  font-size: remy(14px);
+  font-weight: 600;
+
+  &--pointer {
+    cursor: pointer;
+  }
+
+  @include tablet {
+    font-size: remy(16px);
+  }
+
+  @include desktop {
+    font-size: remy(16px);
+  }
+}
+
+.torres-link-next--primary {
+  text-decoration: underline;
+}
+
+.torres-link-next--secondary {
+  position: relative;
+  &::before {
+    content: " ";
+    position: absolute;
+    background-color: map-get($theme-colors, "primary", "base");
+    width: 100%;
+    height: 1px;
+    bottom: -15%;
+    left: 0;
+    z-index: 9;
+  }
+}
