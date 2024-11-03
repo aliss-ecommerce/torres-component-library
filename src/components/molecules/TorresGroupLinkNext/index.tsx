@@ -1,7 +1,7 @@
 import clsx from "clsx";
 import { FC, useEffect, useState } from "react";
 import { TorresLinkNext } from "src/components/atoms";
-import { IGroupButtonLinkNext } from "src/types/models";
+import { IGroupButtonLinkNext } from "../../../types/models";
 
 import "./style.scss";
 

@@ -14,4 +14,17 @@ $theme-border-radius: (
     tablet: 50%,
     desktop: 50%,
   ),
+  input: (
+    mobile: 8px,
+    tablet: 8px,
+    desktop: 8px,
+  ),
+  tag: (
+    mobile: 8px,
+    tablet: 8px,
+    desktop: 8px,
+  ),
+  badge: (
+    radius: 50%,
+  ),
 );

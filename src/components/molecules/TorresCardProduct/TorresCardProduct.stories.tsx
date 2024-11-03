@@ -1,7 +1,7 @@
 import { Meta, StoryFn } from "@storybook/react";
 import TorresCardProduct from ".";
 import { IMAGE_RATIO_ASPECTS } from "src/types/constants";
-import product_1 from "src/assets/product_1.jpeg";
+// import product_1 from "src/assets/product_1.jpeg";
 
 export default {
   title: "Molecules/TorresCardProduct",
@@ -29,7 +29,7 @@ Default.args = {
   price: 18900,
   priceList: 15120,
   image: {
-    url: product_1,
+    url: '',
     alt: "Placeholder",
     aspectRatio: IMAGE_RATIO_ASPECTS.CARD,
   },

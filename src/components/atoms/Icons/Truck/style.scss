@@ -1,0 +1,13 @@
+.truck-icon{
+  &--disabled{
+    fill: map-get($theme-colors, 'blackT', 'lighten5');
+  }
+
+  &--current{
+    fill: map-get($theme-colors, 'whiteT', 'base');
+  }
+
+  &--completed, &--error{
+    display: none;
+  }
+}

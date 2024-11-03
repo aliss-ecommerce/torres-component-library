@@ -1,5 +1,5 @@
 import { IButtonColor } from "../atoms";
-import { ISelectedGroupValues, selectOption } from "../common";
+import { ISelectedGroupValues, selectOption } from"src/types/models";
 
 export interface IGroupButtonBase {
   group: string;

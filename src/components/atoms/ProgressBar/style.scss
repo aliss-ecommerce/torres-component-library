@@ -1,0 +1,39 @@
+.progress-bar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: remy(8px);
+  width: 100%;
+
+  &__value,
+  &__total {
+    @include config-font(16px, 500, 20px);
+  }
+
+  &__value {
+    color: map-get($theme-colors, "primary", "base");
+  }
+  &__total {
+    color: map-get($theme-colors, "primary", "base");
+    opacity: 0.7;
+    &--completed {
+      opacity: 1;
+      color: map-get($theme-colors, "primary", "base");
+    }
+  }
+  &__progress-bar {
+    width: 100%;
+    height: remy(6px);
+    flex-grow: 1;
+    background-color: map-get($theme-colors, "primary", "base");
+    border-radius: 130px;
+    position: relative;
+    overflow: hidden;
+    &__progress {
+      height: remy(6px);
+      background-color: map-get($theme-colors, "selectable", "base");
+      border-radius: remy(130px);
+      transition: width 0.5s ease-in-out;
+    }
+  }
+}

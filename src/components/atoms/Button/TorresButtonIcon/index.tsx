@@ -1,10 +1,10 @@
 import { FC } from "react";
-import { IButtonIcon } from "types/models";
+import { IButtonIcon } from"../../../../types/models";
 import * as iconsTorres from "components/atoms/Icons";
 
 import "./style.scss";
 import clsx from "clsx";
-import { BUTTON_VARIANTS } from "src/types/constants";
+import { BUTTON_VARIANTS } from "../../../../types/constants";
 
 const TorresButtonIcon: FC<IButtonIcon> = ({
   icon,

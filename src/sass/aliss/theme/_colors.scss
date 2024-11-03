@@ -9,12 +9,24 @@ $theme-colors: (
     base: #a4036f,
     dark: darken(#a4036f, 20%),
   ),
+  success: (
+    light: lighten(#47dca6, 25%),
+    base: #47dca6,
+    dark: darken(#47dca6, 25%),
+    darken2: darken(#47dca6, 50%),
+  
+  ),
   error: (
-    light: lighten(#dc3545, 20%),
-    base: #dc3545,
-    dark: darken(#dc3545, 20%),
+    light: lighten(#fc4e55, 25%),
+    base: #fc4e55,
+    dark: darken(#fc4e55, 25%),
+    darken2: darken(#fc4e55, 50%),
   ),
   blackT: (
+    lighten5: lighten(#121212, 50%),
+    lighten4: lighten(#121212, 40%),
+    lighten2: lighten(#121212, 25%),
+    lighten1: linghten(#121212, 20%),
     lignt: linghten(#121212, 20%),
     base: #121212,
     dark: darken(#121212, 20%),
@@ -39,5 +51,66 @@ $theme-colors: (
   borderButtonNotSelected: (
     base: #b3b3b3,
     inverse: #ffffff,
+  ),
+  selectable: (
+    lighten1: lighten(#f8f9ff, 25%),
+    base: #00CEC0,
+    dark: darken(#00CEC0, 25%),
+  ),
+  badge:( 
+    base: #a4036f,
+    disabled: #e6e9f7,
+  ),
+  backgroundItem: (
+    light: lighten(#eeecfb, 25%),
+    base: #eeecfb,
+    dark: darken(#eeecfb, 25%),
+  ),
+);
+
+$status-colors: (
+  created: (
+    label: #573cd6,
+    background: #eeecfb,
+  ),
+  pending_payment: (
+    label: #ffb400,
+    background: #fff8e1,
+  ),
+  payment_verifying: (
+    label: #546be0,
+    background: #eef0fc,
+  ),
+  payment_failed: (
+    label: #fc4e55,
+    background: #ffedee,
+  ),
+  error: (
+    label: #fc4e55,
+    background: #ffedee,
+  ),
+  payment_successful: (
+    label: #329a74,
+    background: #edfcf6,
+  ),
+  preparing: (
+    label: #546be0,
+    background: #eef0fc,
+  ),
+  transit: (
+    label: #fe88e2,
+    background: #fff3fc,
+  ),
+  shipping: (
+    label: #ff795c,
+    background: #fff2ef,
+  ),
+  delivered: (
+    label: #329a74,
+    background: #edfcf6,
+  ),
+  cancelled: (
+    label: #fc4e55,
+    background: #ffedee,
   ),
 );

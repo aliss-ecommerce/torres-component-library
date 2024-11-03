@@ -1,9 +1,15 @@
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import dts from 'vite-plugin-dts';
 import { peerDependencies } from "./package.json";
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    dts({
+      insertTypesEntry: true,
+    }),
+  ],
   resolve: {
     alias: {
       src: "/src",
@@ -14,7 +20,7 @@ export default defineConfig({
   build: {
     lib: {
       entry: "./src/index.ts", // Especifica el punto de entrada
-      name: "vite-react-ts-button", // Establece el nombre de la biblioteca generada.
+      name: "torres-component-library", // Establece el nombre de la biblioteca generada.
       fileName: (format) => `index.${format}.js`, // Genera el nombre del archivo de salida según el formato.
       formats: ["cjs", "es"], // Especifica los formatos de salida (módulos CommonJS y ES).
     },

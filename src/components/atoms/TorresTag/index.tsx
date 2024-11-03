@@ -1,4 +1,4 @@
-import { ITag } from "src/types/models";
+import { ITag } from "../../../types/models";
 
 import "./style.scss";
 

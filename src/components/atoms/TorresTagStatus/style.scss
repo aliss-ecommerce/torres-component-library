@@ -1,0 +1,13 @@
+
+.tag-torres {
+  border-radius: map-get($theme-border-radius, tag, desktop);
+  padding: remy(4px) remy(8px);
+  @include config-font(12px, 700, 16px);
+
+  @each $status, $colors in $status-colors {
+    &--#{$status} {
+      background: map-get($colors, 'background');
+      color: map-get($colors, 'label');
+    }
+  }
+}

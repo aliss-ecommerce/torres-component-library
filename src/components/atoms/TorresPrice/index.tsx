@@ -1,9 +1,9 @@
 import clsx from "clsx";
-import { IPrice } from "src/types/models";
+import { IPrice } from "../../../types/models";
 import { currencyFormatter } from "src/utils/currency";
 
 import "./style.scss";
-import { CURRENCY_SYMBOLS } from "src/types/constants";
+import { CURRENCY_SYMBOLS } from "../../../types/constants";
 
 const TorresPrice: React.FC<IPrice> = ({ value, currency=CURRENCY_SYMBOLS.PEN, through=false }) => {
   const torresPriceValueClass = clsx('torres-price__value', {

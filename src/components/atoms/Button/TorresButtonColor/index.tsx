@@ -1,6 +1,6 @@
 import clsx from "clsx";
 import { FC } from "react";
-import { IButtonColor } from "src/types/models";
+import { IButtonColor } from "../../../../types/models";
 
 import "./style.scss";
 

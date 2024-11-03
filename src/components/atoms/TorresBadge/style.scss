@@ -1,0 +1,38 @@
+
+
+.badge {
+  width: remy(40px);
+  height: remy(40px);
+  border-radius: map-get($theme-border-radius, badge, radius);
+  background-color: map-get($theme-colors, "badge", "base");
+  color: map-get($theme-colors, "whiteT", "base");
+  display: grid;
+  place-items: center;
+
+  &--disabled {
+    background-color: map-get($theme-colors, "badge", "disabled");
+  }
+
+  &--completed {
+    background-color: map-get($theme-colors, "success", "base");
+  }
+
+  &--error {
+    background-color: map-get($theme-colors, "error", "base");
+  }
+
+  &--small {
+    width: remy(32px);
+    height: remy(32px);
+    min-width: remy(32px);
+    min-height: remy(32px);
+  }
+
+  &--medium {
+    width: remy(40px);
+    height: remy(40px);
+    min-width: remy(40px);
+    min-height: remy(40px);
+  }
+
+}

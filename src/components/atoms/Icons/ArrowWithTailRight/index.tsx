@@ -1,4 +1,4 @@
-import { IIcon } from "types/models";
+import { IIcon } from"../../../../types/models";
 import "./style.scss";
 
 const ArrowWithTailRightIcon: React.FC<IIcon> = ({ size, variant='primary' }) => {

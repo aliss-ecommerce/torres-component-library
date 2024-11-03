@@ -1,0 +1,22 @@
+.cart-icon {
+  width: remy(24px);
+  height: auto;
+  fill: none;
+  &--primary path {
+    stroke: map-get($theme-colors, "blackT", "base");
+  }
+
+  &--selected path {
+    stroke: map-get($theme-colors, "primary", "base");
+  }
+
+  &--secondary {
+    path {
+      stroke: map-get($theme-colors, "whiteT", "base");
+    }
+  }
+  
+  &--not-selected path {
+    stroke: map-get($theme-colors, 'blackT', 'base' );
+  }
+}

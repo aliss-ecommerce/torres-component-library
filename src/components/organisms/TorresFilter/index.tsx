@@ -5,19 +5,17 @@ import {
   TorresTitle,
   TorresSubtitle,
 } from "components/atoms";
-import { IFilter, IFilterConfs } from "types/models";
-import { ICONS_NAMES } from "src/types/constants";
+import { BOOLEAN_OPERATOR, FILTER_TYPE, IFilter, IFilterConfs, ISelectedGroupValues } from"../../../types/models";
+import { ICONS_NAMES } from "../../../types/constants";
 import {
   TorresGroupButtonChip,
   TorresGroupButtonColor,
   TorresGroupLinkNext,
 } from "src/components/molecules";
-import { BOOLEAN_OPERATOR, FILTER_TYPE } from "torres-common";
-import { ISelectedGroupValues } from "src/types/models/common";
 
 import "./style.scss";
 
-const TorresFilter: FC<IFilterConfs> = ({ config, change }) => {
+const TorresFilter: FC<IFilterConfs> = ({ config, change, close }) => {
   const [filters, setFilters] = useState<IFilter[]>([]);
   const className = clsx("TorresFilter");
 
@@ -70,7 +68,7 @@ const TorresFilter: FC<IFilterConfs> = ({ config, change }) => {
     <div className={className}>
       <div className="TorresFilter__container-header">
         <TorresTitle size="medium" text="Filter" />
-        <TorresButtonIcon icon={ICONS_NAMES.CLOSE} />
+        <TorresButtonIcon icon={ICONS_NAMES.CLOSE} action={close}/>
       </div>
       {config.category ? (
         <div className="TorresFilter__container-item">

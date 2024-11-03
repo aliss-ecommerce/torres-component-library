@@ -1,0 +1,68 @@
+
+
+.circle-percentage {
+  display: block;
+  transition: 0.3s ease;
+
+  &--error{
+    animation: ScaleAnimation 0.5s ease-in-out forwards;
+    .circle-percentage__bar{
+      stroke: map-get($theme-colors, "error", "base");
+    }
+    .circle-percentage__icon-error{
+      display: block;
+    }
+    .circle-percentage__text{
+      display: none;
+    }
+  }
+
+  &--full{
+    animation: ScaleAnimation 0.5s ease-in-out forwards;
+    .circle-percentage__bar{
+      stroke: map-get($theme-colors, "success", "base");
+    }
+    .circle-percentage__icon-check{
+      display: block;
+    }
+    .circle-percentage__text{
+      display: none;
+    }
+  }
+
+  // children
+  &__background {
+    fill: none;
+    stroke: map-get($theme-colors, 'backgroundItem', "base");
+  }
+
+  &__bar {
+    fill: none;
+    stroke: map-get($theme-colors, "primary", "base");
+    stroke-linecap: round;
+    transition: stroke-dashoffset 0.3s ease;
+    transform-origin: center;
+    transform: rotate(-90deg);
+  }
+
+  &__text {
+    font-weight: 700;
+    line-height: remy(22px);
+    fill: map-get($theme-colors, "blackT", "lighten1");
+  }
+
+  &__icon-check{
+    display: none;
+  }
+
+  &__icon-error{
+    display: none;
+  }
+}
+
+
+
+
+
+
+

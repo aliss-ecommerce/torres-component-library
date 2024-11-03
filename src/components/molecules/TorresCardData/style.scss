@@ -1,0 +1,72 @@
+.card-data-container {
+  display: grid;
+  gap: remy(8px);
+  width: 100%;
+  &__label {
+    color: map-get($theme-colors, "blackT", "lignt");
+
+    @include config-font(14px, 700, 16px);
+  }
+
+  .card-data-container__header{
+    display: flex;
+    align-items: center;
+    gap: remy(8px);
+
+    &--between{
+      justify-content: space-between;
+    }
+
+    &--right{
+      justify-content: flex-end;
+    }
+
+    .card-data-button-action{
+      @include reset-button-style;
+    }
+  }
+
+  .card-data {
+    border-radius: map-get($theme-border-radius, card, mobile);
+    display: grid;
+    gap: remy(16px);
+
+    @include tablet {
+      border-radius: map-get($theme-border-radius, card, tablet);
+    }
+
+    @include desktop {
+      border-radius: map-get($theme-border-radius, card, desktop);
+    }
+
+    &.active-border {
+      border: solid 1px #c5cbe0;
+      padding: remy(16px);
+      // border-color: map-get($theme-colors, "primary");
+    }
+
+    &__item {
+      &__title,
+      &__value {
+        display: grid;
+        gap: remy(4px);
+      }
+
+      &__title {
+        color: map-get($theme-colors, "blackT", "lighten4");
+
+        @include config-font(12px, 400, 16px);
+      }
+      &__value {
+        color: map-get($theme-colors, "blackT", "lignt");
+        @include config-font(14px, 400, 18px);
+      }
+      &__value-list {
+        color: map-get($theme-colors, "blackT", "lignt");
+        padding: 0 remy(16px);
+
+        @include config-font(14px, 400, 18px);
+      }
+    }
+  }
+}

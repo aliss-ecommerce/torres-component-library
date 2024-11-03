@@ -1,0 +1,30 @@
+.payment-success-icon {
+  width: 19px;
+  height: 19px;
+  fill: none;
+  &--primary {
+    path {
+      fill: map-get($theme-colors, "primary", "base");
+    }
+  }
+  &--secondary {
+    path {
+      fill: map-get($theme-colors, "whiteT", "base");
+    }
+  }
+  &--disabled{
+    fill: map-get($theme-colors, 'blackT', 'lighten5');
+  }
+
+  &--current{
+    fill: map-get($theme-colors, 'whiteT', 'base');
+  }
+  @include tablet {
+    width: 19px;
+    height: 19px;
+  }
+  @include desktop {
+    width: 19px;
+    height: 19px;
+  }
+}

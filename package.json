@@ -5,17 +5,34 @@
   "type": "module",
   "main": "dist/index.cjs.js",
   "module": "dist/index.es.js",
-  "types": "dist/index.d.ts",
-  "style.css": "dist/style.css",
   "files": [
     "/dist"
   ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.es.js",
+      "require": "./dist/index.cjs.js",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.es.js"
+    },
+    "./types": {
+      "import": "./dist/index.d.ts",
+      "require": "./dist/index.d.ts",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.d.ts"
+    },
+    "./style": {
+      "import": "./dist/style.css",
+      "require": "./dist/style.css",
+      "types": "./dist/style.css",
+      "default": "./dist/style.css"
+    }
+  },
   "scripts": {
     "build": "tsc && vite build",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
-    "lint-staged": "lint-staged",
-    "prepare": "husky install"
+    "clean": "node clean-dts.js"
   },
   "dependencies": {
     "@storybook/addons": "^7.6.17",
@@ -46,12 +63,15 @@
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.9",
     "eslint-plugin-storybook": "^0.8.0",
+    "glob": "^11.0.0",
     "globals": "^15.9.0",
     "lint-staged": "^15.2.10",
+    "rimraf": "^6.0.1",
     "storybook": "^8.2.9",
     "typescript": "^5.5.3",
     "typescript-eslint": "^8.0.1",
-    "vite": "^5.4.1"
+    "vite": "^5.4.1",
+    "vite-plugin-dts": "^4.2.1"
   },
   "eslintConfig": {
     "extends": [
@@ -69,10 +89,5 @@
     "*.{css,scss,md}": [
       "prettier --write"
     ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   }
 }

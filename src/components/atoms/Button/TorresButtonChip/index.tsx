@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { IButtonChip } from "types/models";
+import { IButtonChip } from"../../../../types/models";
 import * as iconsTorres from "components/atoms/Icons";
 
 import "./style.scss";

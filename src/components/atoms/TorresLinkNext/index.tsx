@@ -1,8 +1,8 @@
-import { IlinkNext } from "types/models";
+import { IlinkNext } from"../../../types/models";
 import * as iconsTorres from "components/atoms/Icons";
 
 import "./style.scss";
-import { ICONS_NAMES } from "src/types/constants";
+import { ICONS_NAMES } from "../../../types/constants";
 import clsx from "clsx";
 
 const TorresLinkNext: React.FC<IlinkNext> = ({

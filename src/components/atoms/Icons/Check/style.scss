@@ -1,0 +1,19 @@
+.icon-check{
+  width: remy(24px);
+  height: remy(24px);
+  &--disabled{
+    fill: map-get($theme-colors, 'blackT', 'lighten5');
+  }
+
+  &--current{
+    fill: map-get($theme-colors, 'whiteT', 'base');
+  }
+
+  &--primary{
+    fill: map-get($theme-colors, 'success', 'base');
+  }
+
+  &--secondary{
+    fill: map-get($theme-colors, 'whiteT', 'base');
+  }
+}

@@ -1,6 +1,6 @@
 import { Meta, StoryFn } from "@storybook/react";
 import { IMAGE_RATIO_ASPECTS } from "src/types/constants";
-import bannerTwo from "src/assets/bannerTwo.png";
+// import bannerTwo from "src/assets/bannerTwo.png";
 import { BrowserRouter } from "react-router-dom";
 import { useEffect } from "react";
 import TorresBannerTwo from ".";
@@ -29,7 +29,7 @@ export const Default: StoryFn<typeof TorresBannerTwo> = (args) => <TorresBannerT
 Default.args = {
   title: 'Purses',
   image: {
-    url: bannerTwo,
+    url: '',
     alt: 'TorresBannerOne',
     aspectRatio: IMAGE_RATIO_ASPECTS.BANNER_TWO,
   },

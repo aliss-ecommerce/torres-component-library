@@ -1,6 +1,6 @@
 import React from "react";
 import clsx from "clsx";
-import { IButton } from "types/models";
+import { IButton } from "../../../../types/models";
 import * as iconsTorres from "components/atoms/Icons";
 import { BUTTON_TYPES, BUTTON_VARIANTS } from "types/constants";
 
@@ -14,6 +14,8 @@ const TorresButton: React.FC<IButton> = ({
   type = BUTTON_TYPES.BUTTON,
   variant = BUTTON_VARIANTS.PRIMARY,
   isDisabled = false,
+  isWidthAll = false,
+  isWidthAllMobile = false,
 }) => {
   const IconBefore =
     iconBefore && iconsTorres[iconBefore as keyof typeof iconsTorres];
@@ -22,6 +24,8 @@ const TorresButton: React.FC<IButton> = ({
 
   const classNames = clsx(`torres-button`, {
     [`torres-button--${variant}`]: Boolean(variant),
+    [`torres-button--width-all`]: isWidthAll,
+    [`torres-button--width-all-mobile`]: isWidthAllMobile,
   });
 
   const variantIcons =

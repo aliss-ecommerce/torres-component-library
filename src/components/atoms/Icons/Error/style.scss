@@ -1,0 +1,12 @@
+.icon-error{
+
+  &--primary{
+    fill: map-get($theme-colors, 'error', 'base');
+  
+  }
+
+  &--secondary{
+    fill: map-get($theme-colors, 'whiteT', 'base');
+  }
+
+}

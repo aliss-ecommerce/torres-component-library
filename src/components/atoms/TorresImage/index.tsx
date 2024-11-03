@@ -1,5 +1,5 @@
 import React from 'react';
-import { IImage } from 'types/models';
+import { IImage } from '../../../types/models';
 
 import './style.scss';
 

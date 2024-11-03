@@ -9,6 +9,8 @@ export interface IButton {
   type?: BUTTON_TYPES;
   theme?: "dark" | "light";
   isDisabled?: boolean;
+  isWidthAll?: boolean;
+  isWidthAllMobile?: boolean;
 }
 
 export interface IButtonIcon {

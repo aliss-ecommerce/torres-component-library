@@ -1,0 +1,135 @@
+.adaptive-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: transparent;
+  transition: 0.4s ease;
+  visibility: hidden;
+  z-index: z-index("modal");
+
+  &--opening {
+    display: flex;
+    visibility: visible;
+    .adaptive-modal__content {
+      &--right{
+        animation: slideInFromRight 0.4s forwards;
+      }
+      &--left{
+        animation: slideInFromLeft 0.4s forwards;
+      }
+    
+    }
+  }
+
+  &--closing {
+    animation: removeElement 0.5s forwards;
+    .adaptive-modal__content {
+      &--right{
+        animation: slideOutToRight 0.5s forwards;
+      }
+      &--left{
+        animation: slideOutToLeft 0.5s forwards;
+      }
+    
+    }
+  }
+
+  &__content {
+    position: absolute;
+    height: 100vh;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+    background-color: map-get($theme-colors, "whiteT", "base");
+  }
+}
+
+.adaptive-modal-overlay{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: map-get($theme-colors, "primary", 'base');
+  opacity: 0.6;
+  transition: 0.4s ease;
+  visibility: hidden;
+  z-index: z-index("overlay");
+  &--opening {
+    visibility: visible;
+  }
+
+  &--closing {
+    animation: removeElement 0.5s forwards;
+  }
+}
+
+@keyframes slideOutToRight {
+  
+  from {
+    right: 0;
+  }
+  
+  to {
+    right: -100%;
+  }
+}
+
+@keyframes slideInFromRight {
+  from {
+    right: -50%;
+  }
+  to {
+    right: 0;
+  }
+}
+
+@keyframes slideOutToLeft {
+  
+  from {
+    left: 0;
+  }
+  
+  to {
+    left: -100%;
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    left: -50%;
+  }
+  to {
+    left: 0;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes removeElement {
+  0% {
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    opacity: 0;
+    visibility: hidden;
+  }
+}

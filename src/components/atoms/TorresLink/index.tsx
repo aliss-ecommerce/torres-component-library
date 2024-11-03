@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
-import { ILink } from "types/models";
+import { ILink } from"../../../types/models";
 import * as iconsTorres from "components/atoms/Icons";
 
 import "./style.scss";
-import { ICONS_NAMES } from "src/types/constants";
+import { ICONS_NAMES } from "../../../types/constants";
 
 const TorresLink: React.FC<ILink> = ({
   href,

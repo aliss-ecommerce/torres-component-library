@@ -169,9 +169,9 @@ $torres-button: (
         inverse: map-get($theme-colors, "blackT", "base"),
       ),
       border: (
-        base: 1px solid
+        base: 1.5px solid
           map-get($theme-colors, "borderButtonColorselected", "base"),
-        inverse: 1px solid
+        inverse: 1.5px solid
           map-get($theme-colors, "borderButtonColorselected", "inverse"),
       ),
       padding: (

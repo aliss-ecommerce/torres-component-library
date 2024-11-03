@@ -1,5 +1,5 @@
 import { TorresImage, TorresPrice, TorresTag } from "components/atoms";
-import { ICardProduct } from "src/types/models";
+import { ICardProduct } from "../../../types/models";
 
 import "./style.scss";
 

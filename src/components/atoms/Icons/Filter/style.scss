@@ -1,0 +1,23 @@
+.filter-icon {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  &--primary {
+    path {
+      fill: map-get($theme-colors, "blackT", "base");
+    }
+  }
+  &--secondary {
+    path {
+      fill: map-get($theme-colors, "whiteT", "base");
+    }
+  }
+  @include tablet {
+    width: 20px;
+    height: 20px;
+  }
+  @include desktop {
+    width: 24px;
+    height: 24px;
+  }
+}

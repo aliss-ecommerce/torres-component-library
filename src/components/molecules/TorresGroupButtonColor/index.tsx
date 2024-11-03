@@ -1,6 +1,6 @@
 import { FC, useEffect, useState } from "react";
 import TorresButtonColor from "src/components/atoms/Button/TorresButtonColor";
-import { IGroupButtonColor } from "src/types/models";
+import { IGroupButtonColor } from "../../../types/models";
 
 import "./style.scss";
 import clsx from "clsx";

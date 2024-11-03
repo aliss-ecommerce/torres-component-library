@@ -11,3 +11,8 @@ export { default as TorresLink } from "./TorresLink";
 export { default as TorresSubtitle } from "./TorresSubtitle";
 export { default as TorresTitle } from "./TorresTitle";
 export { default as TorresParagraph } from "./TorresParagraph";
+export { default as TorresQuantity } from "./TorresQuantity";
+export { default as ProgressBar } from "./ProgressBar";
+export { default as TorresBadge } from "./TorresBadge";
+export { default as TorresTagStatus } from "./TorresTagStatus";
+export { default as TorresCirclePercentage } from "./TorresCirclePercentage";

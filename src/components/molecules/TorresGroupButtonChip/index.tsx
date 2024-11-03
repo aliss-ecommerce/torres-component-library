@@ -1,5 +1,5 @@
 import { FC, useEffect, useState } from "react";
-import { IGroupButton } from "src/types/models";
+import { IGroupButton } from "../../../types/models";
 import { TorresButtonChip } from "src/components/atoms";
 
 import "./style.scss";

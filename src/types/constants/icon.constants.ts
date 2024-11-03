@@ -5,4 +5,13 @@ export enum ICONS_NAMES {
   ARROW_RIGHT_TAIL = "ArrowWithTailRight",
   ARROW_TOP_TAIL = "ArrowWithTailTop",
   CLOSE = "Close",
+  FILTER = "Filter",
+  TRASH = "Trash",
+  CART = "Cart",
+  CHECK = "Check",
+  ERROR = "Error",
+  PAYMENT_PENDING = "PaymentPending",
+  PAYMENT_SUCCESS = "PaymentSuccess",
+  PAYMENT_VERIFYING = "PaymentVerifying",
+  TRUCK = "Truck",
 }

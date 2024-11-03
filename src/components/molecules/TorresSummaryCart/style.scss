@@ -1,0 +1,74 @@
+.summary-cart {
+  height: 100%;
+  position: relative;
+  max-width: remy(592px);
+  width: 100%;
+  background-color: map-get($theme-colors, "whiteT", "base");
+
+  @include mobile{
+    width: 100%;
+  }
+
+  &__container {
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    &__header{
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: remy(18px);
+      &__title{
+        color: map-get($theme-colors, "blackT", "lighten1");
+
+        @include config-font(24px, 600, 32px);
+      }
+    }
+  }
+
+  &__container-subAmount {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    padding: remy(32px) remy(40px);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    box-shadow: map-get($theme-shadow, card);
+
+    @include mobile{
+      padding: remy(16px);
+      padding-bottom: remy(64px);
+    
+    }
+
+    &__subtotal {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      align-items: center;
+      
+      p {
+        color: map-get($theme-colors, "blackT", "lighten1");
+
+        @include config-font(24px, 600, 32px);
+      }
+
+      p:last-child {
+        color: map-get($theme-colors, "primary", "base");
+
+        @include config-font(18px, 700, 28px);
+      }
+    }
+  }
+}
+
+.summary-cart__container__button-submit{
+  display: flex;
+  gap: remy(12px);
+  width: 100%;
+  flex-direction: column;
+  padding: 0;
+}

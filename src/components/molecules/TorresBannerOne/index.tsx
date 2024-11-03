@@ -1,6 +1,5 @@
-import { TorresImage, TorresLink } from "src/components/atoms";
-import TorresSubtitle from "src/components/atoms/TorresSubtitle";
-import { IBannerHome } from "src/types/models";
+import { TorresImage, TorresLink, TorresSubtitle } from "src/components/atoms";
+import { IBannerHome } from "../../../types/models";
 
 import "./style.scss";
 

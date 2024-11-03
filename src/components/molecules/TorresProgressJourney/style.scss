@@ -1,0 +1,25 @@
+.torres-progressJourney {
+  display: flex;
+
+  &__container {
+    flex-grow: 1;
+    display: grid;
+    grid-template-columns: none;
+    grid-template-rows: repeat(auto-fit, minmax(remy(87px), 1fr));
+  }
+
+  &--compressed {
+    .torres-progressJourney__container {
+      display: grid;
+      grid-template-rows: none;
+      grid-template-columns: repeat(auto-fit, minmax(remy(58px), 1fr));
+    }
+  }
+  &--expanded {
+    flex-direction: column;
+    .torres-progressJourney__container {
+      flex-direction: column;
+    }
+  }
+
+}

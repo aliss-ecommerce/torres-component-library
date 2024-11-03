@@ -5,6 +5,7 @@
   width: remy(310px);
   padding: remy(18px);
   height: auto;
+  background-color: map-get($theme-colors, whiteT, base);
 
   @include mobile-xs {
     width: 90%;

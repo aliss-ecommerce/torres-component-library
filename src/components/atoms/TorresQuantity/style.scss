@@ -1,0 +1,46 @@
+.torres--quantity {
+  display: flex;
+  align-items: center;
+  border-radius: map-get($theme-border-radius, input, mobile);
+  border: 1px solid map-get($theme-colors, 'primary', 'base');
+
+  @include tablet {
+    border-radius: map-get($theme-border-radius, input, tablet);
+  }
+
+  @include desktop {
+    border-radius: map-get($theme-border-radius, input, desktop);
+  }
+
+  &__button {
+    @include reset-button-style;
+    @include config-font(18px, 400, 28px);
+    & {
+      padding: 5px 10px;
+      cursor: pointer;
+      line-height: 1;
+      color: map-get($theme-colors, 'primary', 'base');
+    }
+    &:disabled {
+      cursor: not-allowed;
+      opacity: 0.5;
+    }
+  }
+
+  &__value {
+    color: map-get($theme-colors, 'primary', 'base');
+    @include config-font(18px, 700, 28px);
+  }
+
+  //size
+  &--large {
+    padding: 0px 20px;
+    .torres--quantity__button {
+      padding: 6px 20px;
+      @include config-font(24px, 700, 32px);
+    }
+    .torres--quantity__value {
+      @include config-font(24px, 700, 32px);
+    }
+  }
+}

@@ -1,6 +1,6 @@
 import { Meta, StoryFn } from "@storybook/react";
-import TorresFilter from ".";
-import { FILTER_TYPE } from "torres-common";
+import TorresFilter from '.';
+import { FILTER_TYPE } from "src/types";
 
 export default {
   title: "Organisms/TorresFilter",

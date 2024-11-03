@@ -1,0 +1,18 @@
+export * from './Icons';
+export { default as TorresButton } from './Button/TorresButton';
+export { default as TorresButtonChip } from './Button/TorresButtonChip';
+export { default as TorresButtonColor } from './Button/TorresButtonColor';
+export { default as TorresButtonIcon } from './Button/TorresButtonIcon';
+export { default as TorresLinkNext } from './TorresLinkNext';
+export { default as TorresPrice } from './TorresPrice';
+export { default as TorresImage } from './TorresImage';
+export { default as TorresTag } from './TorresTag';
+export { default as TorresLink } from './TorresLink';
+export { default as TorresSubtitle } from './TorresSubtitle';
+export { default as TorresTitle } from './TorresTitle';
+export { default as TorresParagraph } from './TorresParagraph';
+export { default as TorresQuantity } from './TorresQuantity';
+export { default as ProgressBar } from './ProgressBar';
+export { default as TorresBadge } from './TorresBadge';
+export { default as TorresTagStatus } from './TorresTagStatus';
+export { default as TorresCirclePercentage } from './TorresCirclePercentage';

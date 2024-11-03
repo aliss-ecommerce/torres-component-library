@@ -1,0 +1,118 @@
+.step {
+  display: flex;
+  width: 100%;
+
+  &--compressed {
+    .step__description {
+      display: none;
+    }
+    .step__container__badge__and_step-line {
+      width: 100%;
+      display: flex;
+      gap: remy(8px);
+      align-items: center;
+      margin-left: remy(8px);
+       @include mobile{
+        margin-left: 0;
+       }
+    }
+    .step__container-journey--firts {
+      .step__container__badge__and_step-line {
+        margin-left: remy(0px);
+      }
+    }
+  }
+
+  &--expanded {
+    gap: 1rem;
+    .step__container__badge__and_step-line {
+      width: remy(32px);
+      display: flex;
+      gap: remy(10px);
+      flex-direction: column-reverse;
+      align-items: center;
+    }
+    .step__description {
+      display: block;
+      flex-grow: 1;
+      &__body {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    .step__container-journey {
+      display: flex;
+      margin: 0;
+      width: 100% !important;
+      align-items: flex-start;
+      margin-top: remy(10px);
+      .step__container-journey__step-line {
+        width: remy(2px);
+        transform: rotate(180deg);
+        height: remy(45px);
+      }
+    }
+
+    @include mobile{
+      .step__description__body{
+        display: flex;
+        align-items: start;
+        flex-direction: column;
+        gap: remy(4px);
+      }
+    }
+  }
+
+  &__container-journey {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: remy(10px);
+
+    @include tablet-down {
+      gap: remy(8px);
+    }
+
+    &__step-line {
+      border: remy(2px) solid map-get($theme-colors, "badge", "disabled");
+      border-radius: remy(2px);
+      flex-grow: 1;
+      &--completed {
+        border: remy(2px) solid map-get($theme-colors, "success", "base");
+        border-radius: remy(2px);
+      }
+    }
+  }
+
+  &__description {
+    &__title {
+      color: map-get($theme-colors, "blackT", "base");
+
+      @include config-font(16px, 700, 22px);
+    }
+
+    &__body {
+      width: 100%;
+      justify-content: space-between;
+      align-items: start;
+      gap: remy(24px);
+      &__resumen {
+        flex-grow: 1;
+        width: fit-content;
+        color: map-get($theme-colors, "blackT", "base");
+
+        @include config-font(14px, 400, 18px);
+      }
+
+      &__start-date {
+        min-width: remy(185px);
+        width: fit-content;
+        color: map-get($theme-colors, "blackT", "lighten4");
+
+        @include config-font(14px, 400, 18px);
+      }
+    }
+  }
+}

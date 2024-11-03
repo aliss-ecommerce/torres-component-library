@@ -7,5 +7,5 @@ export interface selectOption {
   value: string;
   label: string;
   isSelected?: boolean;
-  [key: string]: string | boolean | number;
+  [key: string]: string | boolean | number | undefined;
 }
