@@ -3,7 +3,7 @@ export { default as ArrowWithTailBottom } from './ArrowWithTailBottom';
 export { default as ArrowWithTailRight } from './ArrowWithTailRight';
 export { default as ArrowWithTailTop } from './ArrowWithTailTop';
 export { default as Close } from './Close';
-export { default as Filter } from './Filter';
+export { default as FilterI } from './Filter';
 export { default as Trash } from './Trash';
 export { default as Cart } from './Cart';
 export { default as Check } from './Check';

@@ -1,23 +1,29 @@
-import clsx from "clsx";
-import { FC, useEffect, useState } from "react";
+import clsx from 'clsx';
+import { FC, useEffect, useState } from 'react';
 import {
   TorresButtonIcon,
   TorresTitle,
   TorresSubtitle,
-} from "components/atoms";
-import { BOOLEAN_OPERATOR, FILTER_TYPE, IFilter, IFilterConfs, ISelectedGroupValues } from"../../../types/models";
-import { ICONS_NAMES } from "../../../types/constants";
+} from 'components/atoms';
+import {
+  BOOLEAN_OPERATOR,
+  FILTER_TYPE,
+  IFilter,
+  IFilterConfs,
+  ISelectedGroupValues,
+} from '../../../types/models';
+import { ICONS_NAMES } from '../../../types/constants';
 import {
   TorresGroupButtonChip,
   TorresGroupButtonColor,
   TorresGroupLinkNext,
-} from "src/components/molecules";
+} from 'src/components/molecules';
 
-import "./style.scss";
+import './style.scss';
 
 const TorresFilter: FC<IFilterConfs> = ({ config, change, close }) => {
   const [filters, setFilters] = useState<IFilter[]>([]);
-  const className = clsx("TorresFilter");
+  const className = clsx('TorresFilter');
 
   const handleFilterChange = () => {
     if (change) {
@@ -27,14 +33,14 @@ const TorresFilter: FC<IFilterConfs> = ({ config, change, close }) => {
   const handleSelect = (valuesGroup: ISelectedGroupValues) => {
     if (valuesGroup.values.length > 0) {
       const existingFilterIndex = filters.findIndex(
-        (filter) => filter.name === valuesGroup.group,
+        filter => filter.name === valuesGroup.group
       );
       let newFilters: IFilter[];
       if (existingFilterIndex !== -1) {
         newFilters = filters.map((filter, index) =>
           index === existingFilterIndex
             ? { ...filter, value: valuesGroup.values }
-            : filter,
+            : filter
         );
       } else {
         newFilters = [
@@ -48,7 +54,7 @@ const TorresFilter: FC<IFilterConfs> = ({ config, change, close }) => {
       setFilters(newFilters);
     } else {
       const filteredFilters = filters.filter(
-        (filter) => filter.name !== valuesGroup.group,
+        filter => filter.name !== valuesGroup.group
       );
       setFilters(filteredFilters);
     }
@@ -60,7 +66,7 @@ const TorresFilter: FC<IFilterConfs> = ({ config, change, close }) => {
   }, [filters]);
 
   if (!config) {
-    console.log("Config is not defined", config);
+    console.log('Config is not defined', config);
     return;
   }
 
@@ -68,13 +74,13 @@ const TorresFilter: FC<IFilterConfs> = ({ config, change, close }) => {
     <div className={className}>
       <div className="TorresFilter__container-header">
         <TorresTitle size="medium" text="Filter" />
-        <TorresButtonIcon icon={ICONS_NAMES.CLOSE} action={close}/>
+        <TorresButtonIcon icon={ICONS_NAMES.CLOSE} action={close} />
       </div>
       {config.category ? (
         <div className="TorresFilter__container-item">
           <TorresSubtitle size="small" text={config.category.label} />
           <TorresGroupLinkNext
-            group={"category"}
+            group={'category'}
             items={config.category.items ?? []}
             multiple={config.category.type === FILTER_TYPE.ITEMS}
             onSelect={handleSelect}
@@ -86,7 +92,7 @@ const TorresFilter: FC<IFilterConfs> = ({ config, change, close }) => {
         <div className="TorresFilter__container-item">
           <TorresSubtitle size="medium" text={config.color.label} />
           <TorresGroupButtonColor
-            group={"color"}
+            group={'color'}
             items={config.color.items ?? []}
             multiple={config.color.type === FILTER_TYPE.ITEMS}
             onSelect={handleSelect}
@@ -97,7 +103,7 @@ const TorresFilter: FC<IFilterConfs> = ({ config, change, close }) => {
         <div className="TorresFilter__container-item">
           <TorresSubtitle size="medium" text={config.size.label} />
           <TorresGroupButtonChip
-            group={"size"}
+            group={'size'}
             items={config.size.items ?? []}
             multiple={config.size.type === FILTER_TYPE.ITEMS}
             onSelect={handleSelect}
@@ -109,7 +115,7 @@ const TorresFilter: FC<IFilterConfs> = ({ config, change, close }) => {
         <div className="TorresFilter__container-item">
           <TorresSubtitle size="medium" text={config.style.label} />
           <TorresGroupLinkNext
-            group={"style"}
+            group={'style'}
             items={config.style.items ?? []}
             multiple={config.style.type === FILTER_TYPE.ITEMS}
             onSelect={handleSelect}
