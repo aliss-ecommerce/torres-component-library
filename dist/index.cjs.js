@@ -28925,7 +28925,10 @@ const qg = ({
       ],
     }),
   qm = ({ children: v, variant: S = 'default', size: g = 'medium' }) =>
-    T.jsx('div', { className: `badge badge--${S} badge--${g}`, children: v }),
+    T.jsx('div', {
+      className: `torres-badge torres-badge--${S} torres-badge--${g}`,
+      children: v,
+    }),
   w3 = ({ status: v, label: S }) =>
     T.jsx('span', { className: `tag-torres tag-torres--${v}`, children: S }),
   _3 = ({ value: v, size: S = 72, error: g = !1, valueMaximum: _ = 100 }) => {
@@ -29230,16 +29233,16 @@ const qg = ({
         );
       }, [v, _]),
       Tt.useEffect(() => {
-        if (b === 'horizontal' && L && V != null && V.current) {
+        if (b === 'horizontal' && !L && V != null && V.current) {
           const K = v.find(Be => Be.value === y),
             pe = document.getElementById(`${K == null ? void 0 : K.value}`);
           V.current && pe && q(V.current, pe, 500);
         }
       }, [y]),
       T.jsx('div', {
+        ref: V,
         className: F,
         children: T.jsx('div', {
-          ref: V,
           className: te,
           children: v.map(K =>
             T.jsx(

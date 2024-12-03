@@ -30030,7 +30030,7 @@ const i3 = ({
     }),
   Og = ({ children: v, variant: S = 'default', size: g = 'medium' }) =>
     /* @__PURE__ */ T.jsx('div', {
-      className: `badge badge--${S} badge--${g}`,
+      className: `torres-badge torres-badge--${S} torres-badge--${g}`,
       children: v,
     }),
   cT = ({ status: v, label: S }) =>
@@ -30354,16 +30354,16 @@ const i3 = ({
         );
       }, [v, _]),
       Ta(() => {
-        if (b === 'horizontal' && L && V != null && V.current) {
+        if (b === 'horizontal' && !L && V != null && V.current) {
           const K = v.find(Be => Be.value === y),
             pe = document.getElementById(`${K == null ? void 0 : K.value}`);
           V.current && pe && Z(V.current, pe, 500);
         }
       }, [y]),
       /* @__PURE__ */ T.jsx('div', {
+        ref: V,
         className: F,
         children: /* @__PURE__ */ T.jsx('div', {
-          ref: V,
           className: te,
           children: v.map(K =>
             /* @__PURE__ */ T.jsx(

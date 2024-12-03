@@ -1,24 +1,22 @@
-
-
-.badge {
+.torres-badge {
   width: remy(40px);
   height: remy(40px);
   border-radius: map-get($theme-border-radius, badge, radius);
-  background-color: map-get($theme-colors, "badge", "base");
-  color: map-get($theme-colors, "whiteT", "base");
+  background-color: map-get($theme-colors, 'badge', 'base');
+  color: map-get($theme-colors, 'whiteT', 'base');
   display: grid;
   place-items: center;
 
   &--disabled {
-    background-color: map-get($theme-colors, "badge", "disabled");
+    background-color: map-get($theme-colors, 'badge', 'disabled');
   }
 
   &--completed {
-    background-color: map-get($theme-colors, "success", "base");
+    background-color: map-get($theme-colors, 'success', 'base');
   }
 
   &--error {
-    background-color: map-get($theme-colors, "error", "base");
+    background-color: map-get($theme-colors, 'error', 'base');
   }
 
   &--small {
@@ -34,5 +32,4 @@
     min-width: remy(40px);
     min-height: remy(40px);
   }
-
 }

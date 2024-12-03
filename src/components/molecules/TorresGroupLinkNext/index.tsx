@@ -92,7 +92,7 @@ const TorresGroupLinkNext: FC<IGroupButtonLinkNext> = ({
 
   useEffect(() => {
     // dirigir el scroll horizontal al item seleccionado
-    if (orientation === 'horizontal' && wrapContent) {
+    if (orientation === 'horizontal' && !wrapContent) {
       if (containerRef?.current) {
         const selectedItem = items.find(item => item.value === selected);
         const item = document.getElementById(`${selectedItem?.value}`);
@@ -104,8 +104,8 @@ const TorresGroupLinkNext: FC<IGroupButtonLinkNext> = ({
   }, [selected]);
 
   return (
-    <div className={className}>
-      <div ref={containerRef} className={classNameContainer}>
+    <div ref={containerRef} className={className}>
+      <div className={classNameContainer}>
         {items.map(item => (
           <TorresLinkNext
             key={item.value}

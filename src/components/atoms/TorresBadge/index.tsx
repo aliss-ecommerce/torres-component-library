@@ -7,9 +7,15 @@ interface BadgeProps {
   size?: string;
 }
 
-const Badge: React.FC<BadgeProps> = ({ children, variant="default", size='medium' }) => {
+const Badge: React.FC<BadgeProps> = ({
+  children,
+  variant = 'default',
+  size = 'medium',
+}) => {
   return (
-    <div className={`badge badge--${variant} badge--${size}`}>
+    <div
+      className={`torres-badge torres-badge--${variant} torres-badge--${size}`}
+    >
       {children}
     </div>
   );
