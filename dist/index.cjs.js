@@ -29253,7 +29253,7 @@ const qg = ({
                 isDisabled: !(Array.isArray(y)
                   ? y.includes(K.value)
                   : y === K.value),
-                id: `${K.value}`,
+                id: K.value,
               },
               K.value
             )
