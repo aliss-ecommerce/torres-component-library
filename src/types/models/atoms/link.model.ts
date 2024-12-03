@@ -1,9 +1,10 @@
-import { ICONS_NAMES } from "src/types/constants";
+import { ICONS_NAMES } from 'src/types/constants';
 
 export interface ILink {
+  id?: string;
   href: string;
   text: string;
-  theme?: "dark" | "light";
+  theme?: 'dark' | 'light';
   isDisabled?: boolean;
   inApp?: boolean;
   variant?: string;
