@@ -119,7 +119,7 @@ const TorresGroupLinkNext: FC<IGroupButtonLinkNext> = ({
                 ? selected.includes(item.value)
                 : selected === item.value)
             }
-            id={`${item.value}`}
+            id={item.value}
           />
         ))}
       </div>
